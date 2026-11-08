@@ -1,7 +1,7 @@
 import type { VideoSource } from '@/lib/types';
 
 // Default predefined video sources - Real Chinese video APIs
-// 已实测可用，按响应速度排序（快的优先）
+// 已实测可用，按综合优先级排序（速度快+片源多的优先）
 export const DEFAULT_SOURCES: VideoSource[] = [
   {
     id: 'hhzy',
@@ -34,13 +34,23 @@ export const DEFAULT_SOURCES: VideoSource[] = [
     group: 'normal',
   },
   {
+    id: 'bfzy',
+    name: '暴风资源',
+    baseUrl: 'https://bfzyapi.com/api.php/provide/vod',
+    searchPath: '',
+    detailPath: '',
+    enabled: true,
+    priority: 4,
+    group: 'normal',
+  },
+  {
     id: 'modu',
     name: '魔都资源',
     baseUrl: 'https://caiji.moduapi.cc/api.php/provide/vod',
     searchPath: '',
     detailPath: '',
     enabled: true,
-    priority: 4,
+    priority: 5,
     group: 'normal',
   },
   {
@@ -50,7 +60,7 @@ export const DEFAULT_SOURCES: VideoSource[] = [
     searchPath: '',
     detailPath: '',
     enabled: true,
-    priority: 5,
+    priority: 6,
     group: 'normal',
   },
   {
@@ -60,23 +70,13 @@ export const DEFAULT_SOURCES: VideoSource[] = [
     searchPath: '',
     detailPath: '',
     enabled: true,
-    priority: 6,
+    priority: 7,
     group: 'normal',
   },
   {
     id: 'hnzy',
     name: '红牛资源',
     baseUrl: 'https://www.hongniuzy2.com/api.php/provide/vod',
-    searchPath: '',
-    detailPath: '',
-    enabled: true,
-    priority: 7,
-    group: 'normal',
-  },
-  {
-    id: 'bfzy',
-    name: '暴风资源',
-    baseUrl: 'https://bfzyapi.com/api.php/provide/vod',
     searchPath: '',
     detailPath: '',
     enabled: true,
